@@ -1,0 +1,11 @@
+<view class="opinionName">{{opinionName}}</view>
+<text>\n</text>
+<view class="buttons">
+<button class="buttonType" bindtap="onChangeShowState">
+{{showView?'隐藏描述':'查看描述'}}</button> 
+<view class="bright789_view_hide{{showView?'bright789_view_show':''}}">
+<text class="bright789-text">{{description}}</text>
+</view>
+<button class="buttonType"bindtap= "recreate" > 重新编辑观点信息</button>
+</view>
+

@@ -1,0 +1,10 @@
+{
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wx30507d88da1805f0",
+	"projectname": "决策速final",
+	"condition": {}
+}

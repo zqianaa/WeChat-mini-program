@@ -1,0 +1,3 @@
+<image src='../images/logo.png' class="icon"></image>
+<view class="remark">点击开始代表您同意决策速使用您的公开信息（头像、昵称）</view>
+<button class="bottomB" open-type="getUserInfo" bindgetuserinfo="getInfo" lang="zh_CN">开始使用决策速</button>

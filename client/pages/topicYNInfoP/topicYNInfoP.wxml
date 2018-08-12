@@ -1,0 +1,13 @@
+<view class="topicName" bindtap="goToMainP">
+<text>{{topicName}}</text>
+</view>
+<view class="topicInfo">
+  <view class="noneContent">话题创建人\n</view>
+  <view class="content">{{creator}}</view>
+  <view class="noneContent">话题简述\n</view>
+  <view class="content">{{des}}</view>
+  <view class="noneContent">话题讨论时间 </view>
+  <view class="content">从 {{startDate}} 到 {{endDate}}</view>
+</view>
+
+<button class="bottomB" bindtap="goToChatP">进入讨论</button>

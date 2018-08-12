@@ -1,0 +1,25 @@
+/* pages/bufferP/bufferP.wxss */
+.icon{
+   margin: 0 auto;  
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 600rpx;
+  height: 600rpx;
+  border-radius: 50%;
+}
+.bottomB{
+  background-color: #24757C;
+  color:white;
+  position:fixed;
+  bottom: 80rpx;
+  left:60rpx;
+  right:60rpx;
+}
+.remark{
+  font-size:25rpx;
+  color:grey;
+  position:fixed;
+  bottom:40rpx;
+  left:60rpx;
+}

@@ -1,0 +1,13 @@
+<view class="topicName" bindtap="goToMainP">
+<text>{{topicName}}</text>
+</view>
+<view class="buttons">
+  <button class="buttonType" bindtap="onChangeShowState">{{showView?'隐藏描述':'查看描述'}}</button>  
+  <view class="bright789_view_hide{{showView?       'bright789_view_show':''}}">
+  <text class="bright789-text">{{description}}</text>
+  </view> 
+  <button class="buttonType" >邀请好友参与讨论</button>
+  <button class="buttonType" bindtap='recreateTopic'>重新编辑话题信息</button>
+  <button class="buttonType" bindtap="quitTopic">退出讨论</button>
+  <button class="buttonType" bindtap="goToCloseTopicP">关闭话题</button>
+</view>

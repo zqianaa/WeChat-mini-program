@@ -1,0 +1,14 @@
+<view class="topicName">
+{{topicName}}
+</view>
+
+<view class="noneContent">话题创建人</view>
+<view class="content">{{topicCreator}} </view>
+<view class="noneContent">话题讨论时间</view>
+<view class="content">从 {{startDate}} 到 {{endDate}} </view>
+<view class="noneContent">话题简述</view>
+<view class="content">{{topicDes}} </view>
+<view class="noneContent">所选观点</view>
+<view class="content">{{chosenOpinion}} </view>
+<view class="noneContent">话题总结</view>
+<view class="content">{{topicSum}} </view>

@@ -1,0 +1,22 @@
+<view class="topicName">
+{{topicName}}
+</view>
+
+<view class="noneContent">话题关闭时间</view>
+<view class="content">{{closeDate}} </view>
+<view calss="nonContent">话题总结</view>
+<textarea class="input" placeholder="请输入对于该话题的总结" placeholder-style="color: grey" bindinput="listenerDesInput" />
+<view class="noneContent">请选择该讨论的结果：</view>
+<view>
+<radio-group class="radio-group" bindchange="radioChange">
+  <label wx:for="{{items}}">
+    <radio class="radio" value="{{item.opinionid}}" checked="{{item.checked}}"/>{{item.opinionname}}
+    <view class="divLine"></view>
+  </label>
+</radio-group>
+</view>
+
+<button class="bottomB" bindtap="listenerClose">确认关闭话题</button>
+
+
+

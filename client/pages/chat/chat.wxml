@@ -1,0 +1,46 @@
+<radio-group bindchange="outputTypeChange">  
+        <view class="filterO">  
+          <block wx:for="{{outputType}}">
+            <view class=" item">  
+              <label class="radio {{item.checked?'itemIsChecked':'itemIsNotChecked'}}">  
+                <radio value="{{item.value}}" checked="{{item.checked}}" hidden="false" />{{item.value}}  
+              </label>   
+            </view> 
+          </block>  
+        </view>  
+</radio-group>  
+
+<view class="page-wrap">
+    <scroll-view class="chat-container" scroll-y scroll-into-view="{{lastMessageId}}" scroll-top="9999999999">
+        <view wx:for="{{messages}}" wx:for-item="message" wx:key="id" id="{{message.id}}" class="message {{message.type}}">
+            <view wx:if="{{message.type == 'speak'}}" class="user-message {{message.isMe ? (message.isPos?'meP':'meN'): (message.isPos?'otherP':'otherN') }}">
+                <image class="avatar" src="{{message.user.avatarUrl}}" mode="aspectFill"></image>
+                <view class="text">
+                    <view class="{{message.isPos?'nicknameP':'nicknameN'}}">{{message.user.nickName}}</view>   
+                    <view class="content">{{message.content}}</view>
+                </view>
+            </view>
+            <view wx:if="{{message.type == 'system'}}" class="system-message">
+                {{message.content}}
+            </view>
+        </view>
+    </scroll-view>
+
+    <radio-group bindchange="inputTypeChange">  
+        <view class="filterI">  
+          <block wx:for="{{inputType}}">
+            <view class=" item">  
+              <label class="radio {{item.checked?'itemIsChecked':'itemIsNotChecked'}}">  
+                <radio value="{{item.value}}" checked="{{item.checked}}" hidden="false" />{{item.value}}  
+              </label>   
+            </view> 
+          </block>  
+        </view>  
+    </radio-group>  
+
+    <view class="input-panel">
+        <button class="pic-icon"></button>
+        <input type="text" value="{{inputContent}}" bindchange="changeInputContent" class="send-input" cursor-spacing='13'></input>
+        <button bindtap="sendMessage" class="send-btn">发送</button>
+    </view> 
+</view>

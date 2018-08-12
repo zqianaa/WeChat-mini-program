@@ -1,0 +1,56 @@
+<!--index.wxml-->
+
+<view class="noneTopic">
+<view class="userinfo">
+ <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+ <text class="userinfo-nickname">{{userInfo.nickName}}
+</text>
+</view>
+<view class="divLine"></view>
+<view class='page_row' bindtap="suo">  
+  <view class="search">  
+    <view class="df search_arr">  
+      <icon class="searchcion" size='18' type='search'></icon>  
+      <input class="textInSearchColumn" disabled placeholder="请输入关键字" value="{{searchValue}}"/>  
+    </view>  
+  </view>  
+</view>
+
+
+
+<radio-group bindchange="radioChange">  
+        <view class="filter">  
+          <block wx:for="{{items}}">  
+            <view class=" item">  
+              <label class="radio {{item.checked?'itemIsChecked':'itemIsNotChecked'}}">  
+                <radio value="{{item.value}}" checked="{{item.checked}}" hidden="false" />{{item.value}}  
+              </label>  
+            </view>  
+          </block>  
+        </view>  
+</radio-group>  
+
+
+
+
+</view>
+
+<scroll-view scroll-y="true">
+<view class="divLine"></view>
+<block wx:for="{{Topic}}" wx:key="topicName">
+<view class="topicList">
+  <block  wx:if="{{item.isClose}}">
+    <image src="../images/redIcon.png" class="COIcon"/>  
+    <view class="topicLine" data-type="{{item.topictype}},{{item.topicid}},{{item.isclose}}" bindtap="goToNext"> {{item.topicName}} </view>
+    <image src="../images/settingB.png" class="moreB" bindtap="goToTopicSettingP" data-listb="{{item.topicid}},{{item.topictype}}"></image>
+  </block>
+  <block  wx:else>
+    <image src="../images/greenIcon.png" class="COIcon"/> 
+    <view class="topicLine" data-type="{{item.topictype}},{{item.topicid}},{{item.isclose}}" bindtap="goToNext"> {{item.topicName}} </view>
+    <image src="../images/settingB.png" class="moreB" bindtap="goToTopicSettingP" data-listb="{{item.topicid}},{{item.topictype}}"></image>
+  </block>
+</view>
+<view class="divLine"></view>
+</block>
+</scroll-view>
+<image src="../images/addB.png" class="addB" bindtap="goToTopicCreateP"></image>

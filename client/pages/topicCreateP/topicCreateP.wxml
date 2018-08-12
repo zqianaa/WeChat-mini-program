@@ -1,0 +1,21 @@
+<view class="topContent">新建话题</view>
+<view class="noneContent">话题名称</view>
+
+<textarea class="input" auto-height='true' type="text" placeholder="输入话题名称" placeholder-style="color: grey" bindinput="listenerPhoneInput" />
+
+<view class="noneContent">话题描述</view>
+
+<textarea class="input" type="text" placeholder="输入对于该话题的描述" placeholder-style="color: grey" bindinput="listenerDescriptionInput"/>
+
+<view class="noneContent">话题类型</view>
+<!--mode默认selector range数据源value选择的index bindchange事件监听-->
+<view class="content">
+  <picker bindchange="listenerPickerSelected" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+</view>
+
+
+<button class="bottomB "bindtap="finishButton">完成</button>

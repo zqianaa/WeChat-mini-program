@@ -1,0 +1,353 @@
+.page-wrap {
+    display: flex;
+    flex-direction: column;
+    background: #ebebeb;
+    position: absolute;
+    top: 80rpx;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+.chat-container {
+    flex: 1;
+    text-align: center;
+    overflow-y:auto;
+}
+
+
+.input-panel {
+    height: 100rpx;
+    box-sizing: border-box;
+    padding: 13rpx 20rpx 0;
+    background: #f5f5f7;
+    border-top:#d7d7d9 1rpx solid;
+    display: flex;
+}
+.pic-icon {
+    width: 60rpx;
+    height: 44rpx;
+    margin: 15rpx 20rpx 0 0;
+    background:url(http://imgcache.qq.com/open_proj/proj_qcloud_v2/wechat_mc/pic/send.svg);
+    display: none;
+}
+.send-input {
+    flex: 1;
+    height: 72rpx;
+    background: #fff;
+    border:#ddd 1rpx solid;
+    border-radius: 3px;
+    margin-right: 20rpx;
+    box-sizing: border-box;
+    padding: 0 10rpx;
+}
+.send-btn {
+    width: 160rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    background-color:#24757C;
+    font-size: 28rpx;
+    color:white;
+}
+.meP .nicknameP {
+    display: none;
+}
+.meN .nicknameN {
+    display: none;
+}
+
+
+@media (max-width : 360px) {
+    .avatar {
+        width: 100rpx;
+        height: 100rpx;
+    }
+    .text .content {
+        border: #ccc 1rpx solid;
+        border-radius: 4px;
+        background: #fff;
+        font-size: 42rpx;
+        line-height: 44rpx;
+        padding: 20rpx;
+        position: relative;
+    }
+    .user-message.other .text .content::before {
+        top: 22rpx;
+        border-right-color: #ccc;
+    }
+    .user-message.other .text .content::after {
+        border: 14rpx solid transparent;
+        top: 23rpx;
+        border-right-color: #fff;
+    }
+
+    .user-message.me .text .content::after,.user-message.me .text .content::before {
+        left: 100%;
+        border-left-style: solid;
+    }
+
+    .user-message.me .text .content::before {
+        top: 22rpx;
+        border-left-color: #70b44d;
+    }
+    .user-message.me .text .content::after {
+        border: 14rpx solid transparent;
+        top: 23rpx;
+        border-left-color: #a0e75b;
+    }
+
+    .input-panel {
+        height: 120rpx;
+        box-sizing: border-box;
+        padding: 13rpx 20rpx 0;
+        background: #f5f5f7;
+        border-top:#d7d7d9 1rpx solid;
+        display: flex;
+    }
+    .pic-icon {
+        display: none;
+        width: 60rpx;
+        height: 44rpx;
+        margin: 25rpx 20rpx 0 0;
+        background:url(http://imgcache.qq.com/open_proj/proj_qcloud_v2/wechat_mc/pic/send.svg);
+    }
+    .send-input {
+        flex: 1;
+        height: 92rpx;
+        background: #fff;
+        border:#ddd 1rpx solid;
+        border-radius: 3px;
+        margin-right: 20rpx;
+        box-sizing: border-box;
+        padding: 0 10rpx;
+    }
+    .send-btn {
+        width: 180rpx;
+        height: 92rpx;
+        line-height: 92rpx;
+        background-color:#24757C;
+        font-size: 36rpx;
+    }
+}
+
+.system-message {
+    font-size: 14px;
+    line-height: 14px;
+    color: #fff;
+    background: #cecece;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 8rpx 15rpx;
+    margin: 30rpx 0 10rpx;
+
+}
+.user-message {
+    margin: 38rpx 20rpx 0;
+    text-align: left;
+    font-size: 0;
+    display: flex
+}
+
+.avatar {
+    width: 84rpx;
+    height: 84rpx;
+    border: #a5a5a7 1rpx solid;
+    display: inline-block;
+    vertical-align: top;
+}
+.text {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.text .nicknameP {
+    color: #737373;
+    font-size: 14px;
+    margin-bottom: 6rpx;
+}
+.text .nicknameN{
+    color: #737373;
+    font-size: 14px;
+    margin-bottom: 6rpx;
+    margin-right: 10rpx;
+    text-align: right;
+}
+.text .content {
+    border: #ccc 1rpx solid;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 36rpx;
+    line-height: 36rpx;
+    padding: 20rpx;
+    position: relative;
+}
+
+.text .content::after,.text .content::before {
+    font-size: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: '';
+    border: 13rpx dashed transparent;
+}
+
+
+.text .content.img {
+    border: #ccc 1rpx solid;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 30rpx;
+    line-height: normal;
+    padding: 10rpx;
+    position: relative;
+    text-align: center;
+    max-width: 560rpx;
+}
+.text .content.img image {
+    max-width: 100%;
+}
+
+
+
+
+
+
+.user-message.otherP .text {
+    margin-left: 19rpx;
+}
+.user-message.meP .text {
+    margin-left: 19rpx;
+}
+.user-message.meP .text .content {
+    background: #a0e75b;
+    border: #70b44d 1rpx solid;
+}
+
+.user-message.otherP .text .content::after,.user-message.otherP .text .content::before {
+    right: 100%;
+    border-right-style: solid;
+}
+.user-message.otherP .text .content::before {
+    top: 18rpx;
+    border-right-color: #ccc;
+}
+.user-message.otherP .text .content::after {
+    border: 12rpx solid transparent;
+    top: 19rpx;
+    border-right-color: #fff;
+}
+
+.user-message.meP .text .content::after,.user-message.meP .text .content::before {
+    right: 100%;
+    border-right-style: solid;
+}
+
+.user-message.meP .text .content::before {
+     top: 18rpx;
+    border-right-color: #70b44d;
+}
+.user-message.meP .text .content::after {
+    border: 12rpx solid transparent;
+    top: 19rpx;
+    border-right-color: #a0e75b;
+}
+
+
+
+
+.user-message.meN{
+  flex-direction: row-reverse;
+}
+.user-message.otherN{
+  flex-direction: row-reverse;
+}
+
+.user-message.otherN .text {
+    margin-right: 19rpx;
+}
+.user-message.meN .text {
+    margin-right: 19rpx;
+}
+.user-message.meN .text .content {
+    background: #a0e75b;
+    border: #70b44d 1rpx solid;
+}
+
+.user-message.otherN .text .content::after,.user-message.otherN .text .content::before {
+    left: 100%;
+    border-left-style: solid;
+}
+.user-message.otherN .text .content::before {
+    top: 18rpx;
+    border-left-color: #ccc;
+}
+.user-message.otherN .text .content::after {
+    border: 12rpx solid transparent;
+    top: 19rpx;
+    border-left-color: #fff;
+}
+
+.user-message.meN .text .content::after,.user-message.meN .text .content::before {
+    left: 100%;
+    border-left-style: solid;
+}
+
+.user-message.meN .text .content::before {
+    top: 18rpx;
+    border-left-color: #70b44d;
+}
+.user-message.meN .text .content::after {
+    border: 12rpx solid transparent;
+    top: 19rpx;
+    border-left-color: #a0e75b;
+}
+
+.filterO{
+  height:80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top:20rpx;
+  padding-bottom: 20rpx;
+  padding-left:40rpx;
+  padding-right:40rpx;
+  font-size:30rpx;
+  background-color: white;
+}
+.filterO label{
+  border-radius: 4px; 
+}
+.filterO .itemIsNotChecked{
+  color:#aaa;
+}
+.filterO .itemIsChecked{
+  color:black;
+  border-bottom: 4px solid #24757C;
+  border-bottom-left-radius: 5rpx;
+  border-bottom-right-radius: 5rpx;
+}
+
+.filterI{
+  height:40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top:20rpx;
+  padding-bottom: 20rpx;
+  padding-left:80rpx;
+  padding-right:80rpx;
+  font-size:30rpx;
+  background-color: white;
+}
+.filterI label{
+  border-radius: 4px; 
+}
+.filterI .itemIsNotChecked{
+  color:#aaa;
+}
+.filterI .itemIsChecked{
+  color:black;
+  border-bottom: 4px solid #24757C;
+  border-bottom-left-radius: 5rpx;
+  border-bottom-right-radius: 5rpx;
+}

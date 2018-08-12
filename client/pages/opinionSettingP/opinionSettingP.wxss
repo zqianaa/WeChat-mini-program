@@ -1,0 +1,28 @@
+page{
+  display:block;
+  min-height: 100%;  
+  background-color:#F0F0F0;  
+}
+.opinionName{
+  background-color: white;
+  display:flex;
+  justify-content: center;
+  height:60rpx;
+  padding:20rpx;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+.buttons{
+  margin-left:auto;
+  margin-right:auto;
+  width:90%;
+}
+.buttonType{
+  background-color: white;
+}
+.bright789_view_hide{ 
+ display: none; 
+} 
+
+.bright789_view_show{ 
+ display: block; 
+} 

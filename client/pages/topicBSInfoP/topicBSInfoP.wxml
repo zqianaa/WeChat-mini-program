@@ -1,0 +1,23 @@
+<view class="topicName" bindtap="goToMainP">
+<text>{{topicName}}</text>
+</view>
+<view class="divLine"></view>
+<view class="topicInfo">
+  <view class="noneContent">话题创建人\n</view>
+  <view class="content">{{creator}}</view>
+  <view class="noneContent">话题简述\n</view>
+  <view class="content">{{des}}</view>
+  <view class="noneContent">话题讨论时间 </view>
+  <view class="content">从 {{startDate}} 到 {{endDate}}</view>
+  <view class="noneContent">观点</view>
+</view>
+
+<view class="divLine"></view>
+<block class="allOpinion" wx:for="{{opinionArray}}">
+<view class="opinionList">
+  <view class="opinionB" bindtap="goToChatP" data-opinionid="{{item.opinionid}}"> {{item.opinionname}} </view>
+  <image src="../images/settingB.png" class="moreB" bindtap="goToOpinionSettingP" data-opinionid="{{item.opinionid}}"></image>
+</view>
+<view class="divLine"></view>
+</block>
+<image src="../images/addB.png" class="addB" bindtap="goToOpinionCreateP"></image>

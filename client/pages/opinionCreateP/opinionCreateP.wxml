@@ -1,0 +1,11 @@
+<view class="topContent">新建观点</view>
+<view class="noneContent">观点</view>
+
+<textarea class="input" auto-height type="text" placeholder="输入观点" placeholder-style="color: grey" bindinput="listenerPhoneInput" />
+
+<view class="noneContent">观点描述</view>
+
+<textarea class="input" placeholder="输入对于观点的描述" placeholder-style="color: grey" bindinput="listenerDescriptionInput"/>
+
+
+<button class="bottomB" bindtap="finishButton">完成</button>
